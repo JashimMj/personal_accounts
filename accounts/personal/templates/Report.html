@@ -1,0 +1,131 @@
+{%extends 'index.html'%}
+{%load static%}
+{%block contant%}
+
+<section class="section">
+    <div class="card" style="padding:10px;">
+        <form method="post" id="abc" target="_blank">
+            {%csrf_token%}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>From Date</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="far fa-building"></i>
+                                </div>
+                            </div>
+                            <input type="Date" class="form-control phone-number" name="fdate" id="fdate">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>To Date</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="far fa-building"></i>
+                                </div>
+                            </div>
+                            <input type="Date" class="form-control phone-number" name="tdate" id="tdate">
+                        </div>
+                    </div>
+                </div>
+                       <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Received Head Wise</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text">
+                                                                <i class="far fa-building"></i>
+                                                            </div>
+                                                        </div>
+                                                         <select class="form-control select2" name="cash">
+                                                            <option>Select Cash Received</option>
+                                                            {%for x in recive%}
+                                                            <option value="{{x.id}}">{{x.Name}}</option>
+                                                            {%endfor%}
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                       <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Received Head Wise</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text">
+                                                                <i class="far fa-building"></i>
+                                                            </div>
+                                                        </div>
+                                                         <select class="form-control select2" name="expense">
+                                                            <option>Select Expense</option>
+                                                            {%for x in expence%}
+                                                            <option value="{{x.id}}">{{x.Name}}</option>
+                                                            {%endfor%}
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                       <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>All Expense</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text">
+                                                                <i class="far fa-building"></i>
+                                                            </div>
+                                                        </div>
+                                                        <input type="Date" class="form-control phone-number" name="Bshort">
+                                                    </div>
+                                                </div>
+                                            </div>
+                       <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Expense Head Wise</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text">
+                                                                <i class="far fa-building"></i>
+                                                            </div>
+                                                        </div>
+                                                        <select class="form-control select2" name="Bank_n">
+                                                            <option value="{{a.Bank_Name.id}}"> {{a.Bank_Name}}</option>
+                                                            {%for x in bank_name%}
+                                                            <option value="{{x.id}}">{{x.Name}}</option>
+                                                            {%endfor%}
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+            </div>
+            <button class="btn btn-primary mr-1" type="bution" formtarget="_blank" id="ar"><i
+                    class="fa fa-print">
+                All Received</i>
+            </button>
+            <button class="btn btn-primary mr-1" type="bution" formtarget="_blank" id="ae"><i
+                    class="fa fa-print">
+                All Expense</i>
+            </button>
+        </form>
+    </div>
+</section>
+<script>
+ $("#ar").click(function(){
+  $('#abc').attr('action',"{%url 'allreceived'%}");
+
+  });
+   $("#ae").click(function(){
+  $('#abc').attr('action',"{%url 'allexpense'%}");
+  });
+
+
+</script>
+{%endblock%}
+
+
+
+
+

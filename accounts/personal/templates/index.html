@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+
+<!-- index.html  21 Nov 2019 03:44:50 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Otika - Admin Dashboard Template</title>
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="{%static 'assets/css/app.min.css'%}">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{%static 'assets/css/style.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/components.css'%}">
+    <!-- Custom style CSS -->
+    <link rel="stylesheet" href="{%static 'assets/css/custom.css'%}">
+    <link rel='shortcut icon' type='image/x-icon' href="{%static 'assets/img/favicon.ico'%}"/>
+      <script src="{%static 'my/htmx.js'%}"></script>
+      <link rel="stylesheet" href="{%static 'assets/bundles/select2/dist/css/select2.min.css'%}">
+  <link rel="stylesheet" href="{%static 'assets/bundles/jquery-selectric/selectric.css'%}">
+    <script src="{%static 'jquary/jq.js'%}"></script>
+
+
+
+
+</head>
+
+<body>
+<div class="loader"></div>
+<div id="app">
+    <div class="main-wrapper main-wrapper-1">
+        <div class="navbar-bg"></div>
+
+        <!--     ############## Head Option ######################-->
+        {%include 'decorator/head.html'%}
+        <!--     #################################################-->
+
+
+        <!--     ############## Sidbar Option ######################-->
+        {%include 'decorator/sidbar.html'%}
+        <!--     #################################################-->
+
+        <!-- Main Content -->
+        <div class="main-content">
+            {%block contant%}
+            <section class="section">
+                <div class="row ">
+
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <a href="/admin/personal/expenselist/add/">
+                        <div class="card">
+                            <div class="card-statistic-4">
+                                <div class="align-items-center justify-content-between">
+                                    <div class="row ">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                                            <div class="card-content">
+                                                <h5 class="font-15">Expense List Entry</h5>
+
+                                                <h2 class="mb-3 font-18">258</h2>
+                                                <p class="mb-0"><span class="col-green">20%</span> Increase</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
+                                            <div class="banner-img">
+                                                <img src="{%static 'list-exp.png'%}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                             </a>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <a href="/admin/personal/expenseentry/add/">
+                        <div class="card">
+                            <div class="card-statistic-4">
+                                <div class="align-items-center justify-content-between">
+                                    <div class="row ">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                                            <div class="card-content">
+                                                <h5 class="font-15">Expense Entry</h5>
+
+                                                <h2 class="mb-3 font-18">258</h2>
+                                                <p class="mb-0"><span class="col-green">20%</span> Increase</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
+                                            <div class="banner-img">
+                                                <img src="{%static 'expence-ed.png'%}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                             </a>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <a href="/admin/personal/cashreceivelist/add/">
+                        <div class="card">
+                            <div class="card-statistic-4">
+                                <div class="align-items-center justify-content-between">
+                                    <div class="row ">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                                            <div class="card-content">
+                                                <h5 class="font-15">Cash Receive List</h5>
+
+                                                <h2 class="mb-3 font-18">258</h2>
+                                                <p class="mb-0"><span class="col-green">20%</span> Increase</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
+                                            <div class="banner-img">
+                                                <img src="{%static 'list_cash.jpg'%}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                             </a>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <a href="/admin/personal/cashreceiveentry/add/">
+                        <div class="card">
+                            <div class="card-statistic-4">
+                                <div class="align-items-center justify-content-between">
+                                    <div class="row ">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                                            <div class="card-content">
+                                                <h5 class="font-15">Cash Receive Entry</h5>
+
+                                                <h2 class="mb-3 font-18">258</h2>
+                                                <p class="mb-0"><span class="col-green">20%</span> Increase</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
+                                            <div class="banner-img">
+                                                <img src="{%static 'cash.png'%}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                             </a>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <a href="{%url 'reports'%}">
+                        <div class="card">
+                            <div class="card-statistic-4">
+                                <div class="align-items-center justify-content-between">
+                                    <div class="row ">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                                            <div class="card-content">
+                                                <h5 class="font-15">Report</h5>
+
+                                                <h2 class="mb-3 font-18">258</h2>
+                                                <p class="mb-0"><span class="col-green">20%</span> Increase</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
+                                            <div class="banner-img">
+                                                <img src="{%static 'cash.png'%}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                             </a>
+                    </div>
+
+
+                </div>
+
+            </section>
+            {%endblock%}
+        </div>
+
+        <!--     ############## Footer Option ######################-->
+        {%include 'decorator/footer.html'%}
+        <!--     #################################################-->
+
+
+    </div>
+</div>
+
+<!-- General JS Scripts -->
+<script src="{%static 'assets/js/app.min.js'%}"></script>
+<!-- JS Libraies -->
+<script src="{%static 'assets/bundles/apexcharts/apexcharts.min.js'%}"></script>
+<!-- Page Specific JS File -->
+<script src="{%static 'assets/js/page/index.js'%}"></script>
+<!-- Template JS File -->
+<script src="{%static 'assets/js/scripts.js'%}"></script>
+<!-- Custom JS File -->
+<script src="{%static 'assets/js/custom.js'%}"></script>
+  <script src="{%static 'assets/bundles/select2/dist/js/select2.full.min.js'%}"></script>
+  <script src="{%static 'assets/bundles/jquery-selectric/jquery.selectric.min.js'%}"></script>
+<script src="{%static 'assets/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js'%}"></script>
+
+</body>
+
+
+<!-- index.html  21 Nov 2019 03:47:04 GMT -->
+</html>
